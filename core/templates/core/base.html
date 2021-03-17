@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Blog</title>
+	<link rel="stylesheet" href="{% static 'css/bulma.css'%}">
+	<link rel="stylesheet" href="{% static 'css/main.css'%}">
+	<link rel="stylesheet" href="{% static 'css/wysiwyg.css'%}">
+</head>
+<body>
+	<section class="hero is-medium is-link">
+	  <div class="hero-body">
+	    <p class="title has-text-centered">
+	      Tudo sobre o python 🐍!
+	    </p>
+	    <p class="subtitle has-text-centered">
+	      Blog criado no minicurso de introdução ao Django.
+	    </p>
+	  </div>
+	</section>
+
+	{% block content%}
+	{% endblock %}
+
+	<footer class="footer">
+	  <div class="content has-text-centered">
+	    <p class="has-text-white">
+	      <strong class="has-text-white">Meu Blog</strong> by <a href="https://github.com/MarcelFeo?tab=repositories">Marcel Féo</a>
+	    </p>
+	  </div>
+	</footer>
+
+</body>
+</html>

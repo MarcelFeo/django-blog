@@ -1,0 +1,20 @@
+{% extends './base.html' %}
+
+{% block content %}
+
+	{% if post_list %}
+		{% for post in post_list %}
+		<section class="section">
+		  <h1 class="title"><a href="{% url 'core:detail' post.id %}">{{ post.title }}</a></h1>
+		  <h2 class="subtitle">
+		    {{ post.resume }}
+		  </h2>
+		</section>
+		{% endfor %}
+	{% else %}
+		<section class="section">
+		  <h1 class="title">Não existe posts cadastrados</h1>
+		</section>
+	{% endif %}
+
+{% endblock %}

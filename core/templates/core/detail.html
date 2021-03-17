@@ -1,0 +1,10 @@
+{% extends './base.html' %}
+
+{% block content %}
+	<section class="section">
+	  <h1 class="title">{{ post.title }}</h1>
+	  <div class="wysiwyg">
+	    {{ post.content|safe }}
+	  </div>
+	</section>
+{% endblock %}
